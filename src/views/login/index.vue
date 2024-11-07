@@ -106,10 +106,13 @@ export default {
       })
     },
     handleLogin() {
+      console.log('要请求登录',this.loginForm)
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
+          debugger;
           this.$store.dispatch('user/login', this.loginForm).then(() => {
+            console.log('登录成功 redirect:',this.redirect);
             this.$router.push({ path: this.redirect || '/' })
             this.loading = false
           }).catch(() => {

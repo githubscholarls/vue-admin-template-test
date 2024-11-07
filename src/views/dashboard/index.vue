@@ -13,6 +13,9 @@ export default {
     ...mapGetters([
       'name'
     ])
+  },
+  mounted(){
+    console.log('dashboard index.vue mounted')
   }
 }
 </script>

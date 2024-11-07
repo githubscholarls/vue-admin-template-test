@@ -24,6 +24,7 @@ export default {
     }
   },
   created() {
+    console.log('breadcrumb breated');
     this.getBreadcrumb()
   },
   methods: {

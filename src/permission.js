@@ -31,6 +31,7 @@ router.beforeEach(async(to, from, next) => {
         next()
       } else {
         try {
+          console.log('路由守卫')
           // get user info
           await store.dispatch('user/getInfo')
 
